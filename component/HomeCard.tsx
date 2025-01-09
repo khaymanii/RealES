@@ -34,7 +34,7 @@ export default function HomeCard () {
     setSelectedCard(null);
   }
   return (
-    <div className="flex flex-col lg:flex-col items-start lg:px-20 mt-10 gap-5 px-5">
+    <div className="flex flex-col lg:flex-col items-start lg:px-20 mt-10 gap-5 px-5 md:px-10">
       <h2 className="text-3xl font-semibold">Homes For You</h2>
       <hr className="w-full h-0.5 bg-gray-700 border-none" />
        <div className="grid lg:grid-cols-3 grid-cols-1 items-center gap-10 w-full">
@@ -73,7 +73,7 @@ export default function HomeCard () {
            </button>
            {/* Modal Content */}
            <div className="flex flex-col lg:flex-row px-10 gap-10 items-center w-full">
-           <div className="relative w-full h-96 min-h-[470px] mb-4">
+           <div className="relative w-full lg:h-96 h-64 lg:min-h-[470px] mb-4">
              <Image
                src={selectedCard.img}
                alt={selectedCard.address}

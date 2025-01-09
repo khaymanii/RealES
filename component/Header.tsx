@@ -12,7 +12,7 @@ function Navbar() {
   {/* Logo and Toggle */}
   <div className="flex items-center justify-between w-full lg:w-auto">
     <a href="#" className="text-2xl font-bold text-blue-800">
-      MILLOW
+      RealES
     </a>
     <button
       className="text-3xl text-blue-800 lg:hidden"
@@ -36,7 +36,7 @@ function Navbar() {
     </ul>
 
     {/* Connect Button */}
-    <div className="flex justify-center mt-4 lg:mt-0 mb-4">
+    <div className="flex justify-center items-center lg:mt-0 mb-4 lg:mb-0">
       <button
         type="button"
         className="bg-blue-600 text-white px-6 py-2 rounded-md"

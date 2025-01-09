@@ -63,7 +63,7 @@ export default function HomeCard () {
 
        {selectedCard && (
          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20">
-         <div className="bg-white lg:p-6 rounded-lg w-full max-w-md lg:max-w-4xl relative p-3">
+         <div className="bg-white lg:p-6 rounded-lg w-full max-w-md lg:max-w-[80%] relative p-3">
            {/* Close Button */}
            <button
              className="absolute top-2 right-2 text-xl text-gray-700"
@@ -73,13 +73,12 @@ export default function HomeCard () {
            </button>
            {/* Modal Content */}
            <div className="flex flex-col lg:flex-row px-10 gap-10 items-center w-full">
-           <div className="relative w-full h-64 mb-4">
+           <div className="relative w-full h-96 min-h-[470px] mb-4">
              <Image
                src={selectedCard.img}
                alt={selectedCard.address}
                layout="fill"
                objectFit="cover"
-               className="rounded-lg"
              />
            </div>
            <div className="flex flex-col gap-2 w-full">

@@ -1,3 +1,7 @@
+import { AiFillHome } from "react-icons/ai"
+import { FaBuilding, FaHome } from "react-icons/fa"
+import { FaHouse } from "react-icons/fa6"
+
 export const homeCard = [
     {
         id: 1,
@@ -40,5 +44,74 @@ export const homeCard = [
         year: "2021",
         details: "An elegant 5-bedroom home in City C, perfect for large families with a stunning view.",
         residence: 'Penthhouses'
-    }
+    },
+    {
+        id: 4,
+        name: "Cozy Cabin Retreat",
+        img: "/images/h5.jpg",
+        price: "60 ETH",
+        span1: "8 beds",
+        span2: "12 bathrooms",
+        span3: "2456 sqft",
+        span4: "4",
+        address:"70780 Tamarisk Ln, Rancho Mirage, CA 92270",
+        year: "2021",
+        details: "An elegant 5-bedroom home in City C, perfect for large families with a stunning view.",
+        residence: 'Penthhouses'
+    },
+    {
+        id: 5,
+        name: "Cozy Cabin Retreat",
+        img: "/images/h6.jpg",
+        price: "80 ETH",
+        span1: "10 beds",
+        span2: "14 bathrooms",
+        span3: "2456 sqft",
+        span4: "4",
+        address:"70780 Tamarisk Ln, Rancho Mirage, CA 92270",
+        year: "2021",
+        details: "An elegant 5-bedroom home in City C, perfect for large families with a stunning view.",
+        residence: 'Penthhouses'
+    },
+    {
+        id: 6,
+        name: "Cozy Cabin Retreat",
+        img: "/images/h1.jpg",
+        price: "90 ETH",
+        span1: "15 beds",
+        span2: "17 bathrooms",
+        span3: "2456 sqft",
+        span4: "4",
+        address:"70780 Tamarisk Ln, Rancho Mirage, CA 92270",
+        year: "2021",
+        details: "An elegant 5-bedroom home in City C, perfect for large families with a stunning view.",
+        residence: 'Penthhouses'
+    },
+]
+
+export const FeaturedCard = [
+    {
+        id: 1,
+        name: "Town House",
+        span: "4 properties",
+        img:  <FaHome className="text-blue-600 text-4xl" />
+    },
+    {
+        id: 2,
+        name: "Office",
+        span: "5 properties",
+        img: <AiFillHome className="text-blue-600 text-4xl" />
+    },
+    {
+        id: 3,
+        name: "Modern Villa",
+        span: "10 properties",
+        img: <FaBuilding className="text-blue-600 text-4xl" />
+    },
+    {
+        id: 4,
+        name: "Apartment",
+        span: "20 properties",
+        img: <FaHouse className="text-blue-600 text-4xl" />
+    },
 ]

@@ -3,5 +3,44 @@
 @tailwind utilities;
 
 body {
-  @apply font-roboto; /* Tailwind shorthand for applying Roboto font */
+  @apply font-roboto bg-[#030516]; /* Tailwind shorthand for applying Roboto font */
+
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 1s forwards;
+  }
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+

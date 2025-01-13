@@ -1,39 +1,58 @@
-import { FaHome, FaKey } from "react-icons/fa";
-import { MdOutlineRealEstateAgent } from "react-icons/md";
+"use client";
+import { workNav } from "@/data";
+import { useState } from "react";
+import Image from "next/image";
+import { FaPlay } from "react-icons/fa";
 
 export default function Workflow () {
-    return (
-        <div className="lg:px-20 px-5 ">
-        <div className="relative bg-[#FFF8F6] mt-20">
-            <div className="flex flex-col items-center justify-center gap-5">
-                <div className="flex flex-col items-center justify-center mt-5 px-2">
-                    <h2 className="text-black font-semibold text-xl">How its work? Find a perfect home</h2>
-                    <span className="text-[12px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                </div>
-            <div className="flex flex-col lg:flex-row md:flex-row items-center justify-between py-5 gap-10 md:px-5">
-                <div className="flex flex-col items-center justify-center gap-2">
-                <FaHome className="text-white bg-blue-500 rounded-full p-2 text-3xl" />
-                <h2 className="text-black text-sm font-semibold">Find Real Estate</h2>
-                <p className="text-black text-center w-[60%] text-sm md:w-full">Sumo petentium ut per, at his wisim utinam
-                adipiscing. Est ei graeco</p>
-                </div>
+    const [activeIndex, setActiveIndex] = useState<number | null>(0)
 
-                <div className="flex flex-col items-center justify-center gap-2">
-                <MdOutlineRealEstateAgent className="text-white bg-blue-500 rounded-full p-2 text-3xl" />
-                <h2 className="text-black text-sm font-semibold">Meet Relator</h2>
-                <p className="text-black text-center w-[60%] text-sm md:w-full">Sumo petentium ut per, at his wisim utinam
-                adipiscing. Est ei graeco</p>
-                </div>
+    const handleClick = (index : number) => {
+        setActiveIndex( index === activeIndex ? null : index)
+    }
+   return ( <div className="flex flex-col lg:px-28 py-10 mt-10 px-5">
+        <h2 className="text-[2.6rem] text-left leading-[1.2] text-white mb-6 lg:w-[63%] w-full">From  <span className="text-[#60a6e7]">Spark</span> to <span className="text-[#60a6e7]">Sportlight:</span>  we take you every step of the way to success.</h2>
+        <div className="flex lg:flex-row items-center lg:gap-40 w-full flex-col gap-5">
+        <div className=" flex flex-col lg:w-full ">
+        <div className="flex justify-between items-center rounded-l-full rounded-r-full border-[rgb(179,208,242)] border-[2px] w-full px-3 py-3 overflow-x-auto scroll-smooth whitespace-nowrap">
+  {workNav.map((card, index) => (
+    <div
+      className={`text-center font-medium text-sm sm:text-base relative cursor-pointer rounded-full px-6 sm:px-8 py-3 sm:py-4 ${
+        activeIndex === index ? "bg-[rgb(179,208,242)] text-black" : "text-white"
+      }`}
+      key={index}
+      onClick={() => handleClick(index)}
+    >
+      <h2>{card.name}</h2>
+    </div>
+  ))}
+</div>
 
-                <div className="flex flex-col items-center justify-center gap-2">
-                <FaKey className="text-white bg-blue-500 rounded-full p-2 text-3xl" />
-                <h2 className="text-black text-sm font-semibold">Take The Keys</h2>
-                <p className="text-black text-center w-[60%] text-sm md:w-full">Sumo petentium ut per, at his wisim utinam
-                adipiscing. Est ei graeco</p>
+
+        <div className="mt-4">
+                  {activeIndex !== null && (
+                    <div className="overflow-hidden transition-all duration-300">
+                      {workNav[activeIndex].details}
+                    </div>
+                  )}
                 </div>
-            </div>
-            </div>
+        </div>
+
+        <div className="w-full">
+                    {activeIndex !== null && (
+            <Image
+              src={
+                workNav[activeIndex].img
+              }
+              alt={workNav[activeIndex].name}
+              className="w-[90%] h-80 rounded-lg transition-opacity duration-300"
+              width={80}
+              height={80}
+            />
+          )}
         </div>
         </div>
-    )
+        <button className="bg-white text-[#030516] font-semibold px-5 py-3 rounded-full hover:bg-[#60a6e7] hover:text-white flex flex-row items-center gap-3 w-fit"> Book a Call <FaPlay /></button>
+    </div>
+   )
 }

@@ -1,117 +1,119 @@
-import { AiFillHome } from "react-icons/ai"
-import { FaBuilding, FaHome } from "react-icons/fa"
-import { FaHouse } from "react-icons/fa6"
+import Beaupreneur from "./component/beaupreneur";
+import Design from "./component/design";
+import Develop from "./component/develop";
+import ExecutivePros from "./component/executivePros";
+import Idea from "./component/idea";
+import Iwaria from "./component/iwaria";
+import Launch from "./component/launch";
+import Stacai from "./component/stacai";
+import Starks from "./component/starks";
 
-export const homeCard = [
+
+export const blogCard = [
     {
         id: 1,
-        name: "Luxury NYC Apartment",
-        img: "/images/h4.jpg",
-        price: "25 ETH",
-        span1: "3 beds",
-        span2: "4 bathrooms",
-        span3: "1200 sqft",
-        span4: "2",
-        address:"123 Main St, City, Country",
-        year: "2021",
-        details: "This is a beautiful 3-bedroom house located in City A. It has modern amenities and a spacious layout.",
-        residence: 'Bugalow',
+        img: "/images/image.webp",
+        title: "Blog",
+        date:"May 29th 2024",
+        span1: "The Reformist",
+        span2: "Will AI take over Art?",
     },
     {
         id: 2,
-        name: "Modern Beach House",
-        img: "/images/h2.jpg",
-        price: "30 ETH",
-        span1: "4 beds",
-        span2: "8 bathrooms",
-        span3: "3969 sqft",
-        span4: "3",
-        address:"70780 Tamarind Dr, City, WA 98004",
-        year: "2024",
-        details: "A luxurious 4-bedroom house in City B with a beautiful garden and plenty of parking space.",
-        residence: 'Condo',
+        img: "/images/image (1).webp",
+        title: "Blog",
+        date:"May 29th 2024",
+        span1: "The Reformist",
+        span2: "Cryptocurrency versus Tokens",
     },
     {
         id: 3,
-        name: "Cozy Cabin Retreat",
-        img: "/images/h3.jpg",
-        price: "40 ETH",
-        span1: "6 beds",
-        span2: "9 bathrooms",
-        span3: "2456 sqft",
-        span4: "4",
-        address:"70780 Tamarisk Ln, Rancho Mirage, CA 92270",
-        year: "2021",
-        details: "An elegant 5-bedroom home in City C, perfect for large families with a stunning view.",
-        residence: 'Penthhouses'
-    },
-    {
-        id: 4,
-        name: "Cozy Cabin Retreat",
-        img: "/images/h5.jpg",
-        price: "60 ETH",
-        span1: "8 beds",
-        span2: "12 bathrooms",
-        span3: "2456 sqft",
-        span4: "4",
-        address:"70780 Tamarisk Ln, Rancho Mirage, CA 92270",
-        year: "2021",
-        details: "An elegant 5-bedroom home in City C, perfect for large families with a stunning view.",
-        residence: 'Penthhouses'
-    },
-    {
-        id: 5,
-        name: "Cozy Cabin Retreat",
-        img: "/images/h6.jpg",
-        price: "80 ETH",
-        span1: "10 beds",
-        span2: "14 bathrooms",
-        span3: "2456 sqft",
-        span4: "4",
-        address:"70780 Tamarisk Ln, Rancho Mirage, CA 92270",
-        year: "2021",
-        details: "An elegant 5-bedroom home in City C, perfect for large families with a stunning view.",
-        residence: 'Penthhouses'
-    },
-    {
-        id: 6,
-        name: "Cozy Cabin Retreat",
-        img: "/images/h1.jpg",
-        price: "90 ETH",
-        span1: "15 beds",
-        span2: "17 bathrooms",
-        span3: "2456 sqft",
-        span4: "4",
-        address:"70780 Tamarisk Ln, Rancho Mirage, CA 92270",
-        year: "2021",
-        details: "An elegant 5-bedroom home in City C, perfect for large families with a stunning view.",
-        residence: 'Penthhouses'
+        img: "/images/image (2).webp",
+        title: "Blog",
+        date:"May 29th 2024",
+        span1: "The Reformist",
+        span2: "Cryptocurrency and Crypto Assets",
     },
 ]
 
-export const FeaturedCard = [
+export const productCard = [
     {
         id: 1,
-        name: "Town House",
-        span: "4 properties",
-        img:  <FaHome className="text-blue-600 text-4xl" />
+        img: "/images/layers-three.svg",
+        title: "Experience",
+        span1: "Decades of collective wisdom. Leverage our extensive experience to avoid common pitfalls and accelerate your business growth.",
+        
     },
     {
         id: 2,
-        name: "Office",
-        span: "5 properties",
-        img: <AiFillHome className="text-blue-600 text-4xl" />
+        img: "/images/layers-three.svg",
+        title: "Quick Support",
+        span1: "We are your reliable partner, always there when you need us, ensuring smooth operations at every stage of your growth.",
+       
     },
     {
         id: 3,
-        name: "Modern Villa",
-        span: "10 properties",
-        img: <FaBuilding className="text-blue-600 text-4xl" />
-    },
-    {
-        id: 4,
-        name: "Apartment",
-        span: "20 properties",
-        img: <FaHouse className="text-blue-600 text-4xl" />
+        img: "/images/layers-three.svg",
+        title: "Cost Savings",
+        span1: "Maximising impact, minimising costs efficiency is key. We provide cost-effective solutions without compromising on quality.",
+      
     },
 ]
+
+export const logo = [
+
+        {
+          id: 1,
+          name: "Starks", 
+          img: "/images/starks (1).svg" , 
+          component: <Starks />
+        },
+        { id: 2,
+          name: "ExecutivePros", 
+          img: "/images/ExecutivePros Logo.svg" ,
+          component: <ExecutivePros />
+        },
+        {  id: 3,
+          name: "stac.ai",
+          img: "/images/stacai.svg",
+          component: <Stacai />
+        },
+        { id: 4,
+          name: "Iwaria",
+          img: "/images/iwaria.svg" ,
+          component: <Iwaria />
+        },
+        { id: 5,
+          name: "Beaupreneur",
+          img: "/images/Beaupreneur.svg" ,
+          component: <Beaupreneur />
+        },
+      ];
+
+ 
+      export const workNav = [
+        {
+            id: 1,
+            name: "Idea",
+            details: <Idea />,
+            img: "/images/idea.svg"
+        },
+        {
+            id: 2,
+            name: "Design",
+            details: <Design />,
+            img: "/images/Design.svg"
+        },
+        {
+            id: 3,
+            name: "Develop",
+            details: < Develop />,
+            img: "/images/Develope.svg"
+        },
+        {
+            id: 4,
+            name: "Launch",
+            details: <Launch />,
+            img: "/images/launch.svg"
+        }
+      ]

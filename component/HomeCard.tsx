@@ -35,7 +35,6 @@ export default function HomeCard () {
     setSelectedCard(null);
   }
   return (
-    <div className="flex flex-col lg:flex-col items-start lg:px-20 mt-10 gap-5 px-5">
     <div className="flex flex-col lg:flex-col items-start lg:px-20 mt-10 gap-5 px-5 md:px-10">
       <h2 className="text-3xl font-semibold">Homes For You</h2>
       <hr className="w-full h-0.5 bg-gray-700 border-none" />
@@ -65,8 +64,8 @@ export default function HomeCard () {
 
        {selectedCard && (
          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20">
+
          <div className="bg-white lg:p-6 rounded-lg w-full max-w-md lg:max-w-[80%] relative p-3">
-           {/* Close Button */}
            <button
              className="absolute top-2 right-2 text-xl text-gray-700"
              onClick={closeModal}
@@ -74,8 +73,8 @@ export default function HomeCard () {
              <FaTimes  className="cursor-pointer"/>
            </button>
            {/* Modal Content */}
+
            <div className="flex flex-col lg:flex-row px-10 gap-10 items-center w-full">
-           <div className="relative w-full h-96 min-h-[470px] mb-4">
            <div className="relative w-full lg:h-96 h-64 lg:min-h-[470px] mb-4">
              <Image
                src={selectedCard.img}
@@ -120,9 +119,10 @@ export default function HomeCard () {
            </div>
          </div>
        </div>
-       </div>
        )}
+
+
        </div>
-       </div>
+
   )
 }

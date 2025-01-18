@@ -25,15 +25,15 @@ export default function Navbar() {
           isMenuOpen ? "flex" : "hidden"
         } absolute top-full left-0 w-full bg-white lg:top-auto lg:w-auto lg:bg-transparent`}
       >
-        <ul className="flex flex-col items-center gap-4 text-xl lg:flex-row lg:gap-10">
-          <li className="cursor-pointer">Buy</li>
-          <li className="cursor-pointer">Rent</li>
-          <li className="cursor-pointer">Sell</li>
+        <ul className="flex flex-col items-center gap-4 lg:flex-row lg:gap-10 lg:pt-0 pt-4 cursor-pointer">
+          <li>Buy</li>
+          <li>Rent</li>
+          <li>Sell</li>
         </ul>
         <div className="flex justify-center mt-4 lg:mt-0 mb-4">
           <button
             type="button"
-            className="bg-blue-600 text-white px-6 py-2 rounded-md"
+            className="bg-blue-600 text-white px-6 py-2 lg:mt-2 rounded-md"
           >
             Connect
           </button>

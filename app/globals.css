@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply font-roboto; /* Tailwind shorthand for applying Roboto font */
-
+:root {
+  --font-roboto: "Roboto", sans-serif;
 }
 
-
-
-
-
+body {
+  font-family: var(--font-roboto);
+}

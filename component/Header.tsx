@@ -8,7 +8,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="navbar flex flex-row items-center justify-between px-6 py-4 bg-light lg:px-16 lg:py-5 relative z-20">
+    <nav className="navbar flex flex-row items-center justify-between px-6 py-4 bg-light lg:px-16 lg:py-2 relative z-20">
       <div className="flex items-center justify-between w-full lg:w-auto">
         <a href="#" className="text-2xl font-bold text-blue-800">
           RealES
